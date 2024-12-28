@@ -54,7 +54,7 @@ def save_uploaded_file(uploaded_file):
         return f.name
 
 def main():
-    st.title("🔍 Product Ingredient Analyzer")
+    st.title("🔍 Product Ingredient Analyzer ")
     
     if 'selected_example' not in st.session_state:
         st.session_state.selected_example = None
@@ -69,10 +69,10 @@ def main():
     
     with tab_examples:
         example_images = {
-            "🍫 Chocolate Bar": "images/hide_and_seek.jpg",
-            "🥤 Energy Drink": "images/bournvita.jpg",
-            "🥔 Potato Chips": "images/lays.jpg",
-            "🧴 Shampoo": "images/shampoo.jpg"
+            "🍫 Chocolate Bar": "hide_and_seek.jpg",
+            "🥤 Energy Drink": "bournvita.jpg",
+            "🥔 Potato Chips": "lays.jpg",
+            "🧴 Shampoo": "shampoo.jpg"
         }
         
         cols = st.columns(4)
