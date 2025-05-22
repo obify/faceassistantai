@@ -69,7 +69,7 @@ def main():
     
     with tab_examples:
         example_images = {
-            "Coloured hair": "Type1.jpg"
+            "Acne face/skin": "face1.jpg"
         }
         
         cols = st.columns(4)
