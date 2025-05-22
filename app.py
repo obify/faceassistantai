@@ -54,7 +54,7 @@ def save_uploaded_file(uploaded_file):
         return f.name
 
 def main():
-    st.title("🔍 Your Hair Assistant ")
+    st.title("🔍 Smart Hair Assistant ")
     
     if 'selected_example' not in st.session_state:
         st.session_state.selected_example = None
@@ -62,14 +62,14 @@ def main():
         st.session_state.analyze_clicked = False
     
     tab_examples, tab_upload, tab_camera = st.tabs([
+        "📚 Examples "
         "📤 Upload Image", 
-        "📸 Take Photo",
-        "📚 Example Hair Types"
+        "📸 Take Photo"
     ])
     
     with tab_examples:
         example_images = {
-            "Type 1": "Type1.jpg"
+            "Coloured hair": "Type1.jpg"
         }
         
         cols = st.columns(4)
