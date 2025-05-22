@@ -62,9 +62,9 @@ def main():
         st.session_state.analyze_clicked = False
     
     tab_examples, tab_upload, tab_camera = st.tabs([
-        "📚 Example Hair Types", 
         "📤 Upload Image", 
-        "📸 Take Photo"
+        "📸 Take Photo",
+        "📚 Example Hair Types"
     ])
     
     with tab_examples:
