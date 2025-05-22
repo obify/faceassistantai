@@ -62,17 +62,14 @@ def main():
         st.session_state.analyze_clicked = False
     
     tab_examples, tab_upload, tab_camera = st.tabs([
-        "📚 Example Products", 
+        "📚 Example Hair Types", 
         "📤 Upload Image", 
         "📸 Take Photo"
     ])
     
     with tab_examples:
         example_images = {
-            "🍫 Chocolate Bar": "hide_and_seek.jpg",
-            "🥤 Energy Drink": "bournvita.jpg",
-            "🥔 Potato Chips": "lays.jpg",
-            "🧴 Shampoo": "shampoo.jpg"
+            "Type 1": "Type1.jpg"
         }
         
         cols = st.columns(4)
