@@ -54,7 +54,7 @@ def save_uploaded_file(uploaded_file):
         return f.name
 
 def main():
-    st.title("🔍 Smart Hair Assistant ")
+    st.title("🔍 Face & Skin Assistant ")
     
     if 'selected_example' not in st.session_state:
         st.session_state.selected_example = None
@@ -81,7 +81,7 @@ def main():
     
     with tab_upload:
         uploaded_file = st.file_uploader(
-            "Upload hair image", 
+            "Upload image", 
             type=["jpg", "jpeg", "png"],
             help="Upload a clear image"
         )
@@ -94,7 +94,7 @@ def main():
                 os.unlink(temp_path) 
     
     with tab_camera:
-        camera_photo = st.camera_input("Take a picture of your hair")
+        camera_photo = st.camera_input("Take a picture")
         if camera_photo:
             resized_image = resize_image_for_display(camera_photo)
             st.image(resized_image, caption="Captured Photo", use_container_width=False, width=MAX_IMAGE_WIDTH)
@@ -115,7 +115,7 @@ def main():
 
 if __name__ == "__main__":
     st.set_page_config(
-        page_title="Hair Assistant Agent",
+        page_title="Face & Skin Assistant",
         layout="wide",
         initial_sidebar_state="collapsed"
     )
