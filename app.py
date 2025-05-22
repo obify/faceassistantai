@@ -54,7 +54,7 @@ def save_uploaded_file(uploaded_file):
         return f.name
 
 def main():
-    st.title("🔍 Product Ingredient Analyzer ")
+    st.title("🔍 Your Hair Assistant ")
     
     if 'selected_example' not in st.session_state:
         st.session_state.selected_example = None
@@ -81,9 +81,9 @@ def main():
     
     with tab_upload:
         uploaded_file = st.file_uploader(
-            "Upload product image", 
+            "Upload hair image", 
             type=["jpg", "jpeg", "png"],
-            help="Upload a clear image of the product's ingredient list"
+            help="Upload a clear image"
         )
         if uploaded_file:
             resized_image = resize_image_for_display(uploaded_file)
@@ -105,7 +105,7 @@ def main():
     
     if st.session_state.selected_example:
         st.divider()
-        st.subheader("Selected Product")
+        st.subheader("Selected Image")
         resized_image = resize_image_for_display(st.session_state.selected_example)
         st.image(resized_image, caption="Selected Example", use_container_width=False, width=MAX_IMAGE_WIDTH)
         
@@ -115,7 +115,7 @@ def main():
 
 if __name__ == "__main__":
     st.set_page_config(
-        page_title="Product Ingredient Agent",
+        page_title="Hair Assistant Agent",
         layout="wide",
         initial_sidebar_state="collapsed"
     )
