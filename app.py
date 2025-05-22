@@ -62,7 +62,7 @@ def main():
         st.session_state.analyze_clicked = False
     
     tab_examples, tab_upload, tab_camera = st.tabs([
-        "📚 Examples "
+        "📚 Examples ",
         "📤 Upload Image", 
         "📸 Take Photo"
     ])
