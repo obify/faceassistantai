@@ -94,7 +94,7 @@ def main():
                 os.unlink(temp_path) 
     
     with tab_camera:
-        camera_photo = st.camera_input("Take a picture of the product")
+        camera_photo = st.camera_input("Take a picture of your hair")
         if camera_photo:
             resized_image = resize_image_for_display(camera_photo)
             st.image(resized_image, caption="Captured Photo", use_container_width=False, width=MAX_IMAGE_WIDTH)
